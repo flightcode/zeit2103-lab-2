@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.TreeSet;
 
 public class TimeCollections {
     private String testName;
@@ -46,7 +48,7 @@ public class TimeCollections {
     }
 
     public static void main(String[] args) {
-        Integer n = 100000; //Change to 1000000 when ready.
+        Integer n = 1000000; //Change to 1000000 when ready.
         
         //Test 1
 
@@ -119,5 +121,83 @@ public class TimeCollections {
 		}
         test6.setEndTime(new Date());
         System.out.println(test6);
+
+        //Test 7
+
+        n = 10000;
+        TimeCollections test7 = new TimeCollections("hashSet10k");
+        HashSet<RandomPerson> test7Array = new HashSet<RandomPerson>();
+
+        test7.setStartTime(new Date());
+        for (int i=0; i<n; ++i) {
+			test7Array.add(new RandomPerson());
+		}
+        test7.setEndTime(new Date());
+        System.out.println(test7);
+
+        //Test 8
+
+        n = 100000;
+        TimeCollections test8 = new TimeCollections("hashSet100k");
+        HashSet<RandomPerson> test8Array = new HashSet<RandomPerson>();
+
+        test8.setStartTime(new Date());
+        for (int i=0; i<n; ++i) {
+			test8Array.add(new RandomPerson());
+		}
+        test8.setEndTime(new Date());
+        System.out.println(test8);
+
+        //Test 9
+
+        n = 1000000;
+        TimeCollections test9 = new TimeCollections("hashSet1mil");
+        HashSet<RandomPerson> test9Array = new HashSet<RandomPerson>();
+
+        test9.setStartTime(new Date());
+        for (int i=0; i<n; ++i) {
+			test9Array.add(new RandomPerson());
+		}
+        test9.setEndTime(new Date());
+        System.out.println(test9);
+
+        //Test 10
+
+        n = 10000;
+        TimeCollections test10 = new TimeCollections("treeSet10k");
+        TreeSet<RandomPerson> test10Array = new TreeSet<RandomPerson>();
+
+        test10.setStartTime(new Date());
+        for (int i=0; i<n; ++i) {
+			test10Array.add(new RandomPerson());
+		}
+        test10.setEndTime(new Date());
+        System.out.println(test10);
+
+        //Test 11
+
+        n = 100000;
+        TimeCollections test11 = new TimeCollections("treeSet100k");
+        TreeSet<RandomPerson> test11Array = new TreeSet<RandomPerson>();
+
+        test11.setStartTime(new Date());
+        for (int i=0; i<n; ++i) {
+			test11Array.add(new RandomPerson());
+		}
+        test11.setEndTime(new Date());
+        System.out.println(test11);
+
+        //Test 12
+
+        n = 1000000;
+        TimeCollections test12 = new TimeCollections("treeSet1mil");
+        TreeSet<RandomPerson> test12Array = new TreeSet<RandomPerson>();
+
+        test12.setStartTime(new Date());
+        for (int i=0; i<n; ++i) {
+			test12Array.add(new RandomPerson());
+		}
+        test12.setEndTime(new Date());
+        System.out.println(test12);
     }
 }
